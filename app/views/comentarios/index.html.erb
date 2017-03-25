@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_comentario_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Comentario
+  <% end %>
+  <h1>Listing comentarios</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Nome</th>
+            <th>Corpo</th>
+            <th>Post</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @comentarios) do |comentario| %>
+            <td><%= comentario.nome %></td>
+            <td><%= comentario.corpo %></td>
+            <td><%= comentario.post %></td>
+            <td><%= link_to 'Show', comentario %></td>
+        <td><%= link_to 'Edit', edit_comentario_path(comentario) %></td>
+        <td><%= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,50 @@
+<div class="page-header">
+
+  <%= link_to new_post_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Novo post
+  <% end %>
+  <h1></h1>
+
+</div>
+
+      <%= content_tag_for(:p, @posts) do |post|%>
+
+          <h3><%= post.titulo %></h3>
+          <span>Por: <%= post.autor %></span> </br>
+          <span>Data: <%= post.created_at%></span> </br>
+
+           <p>
+           <center> <%= image_tag "logo.png", size: "200x200" %> </center>
+           </br>
+           <%= post.corpo %>
+          </p>
+
+          <p> Categoria: <%= post.categoria %> </p>
+
+          <div class="well">
+          
+          <p>Comentarios do post: </p>
+          </br>
+          <!-- Listing current comments -->
+                        
+          <!-- END -->
+
+          </br>
+
+          <!-- Add a new comment in post-->
+          <p>Faca um comentario:</p> </br>
+          
+          <!-- END -->
+
+          </div>
+
+          <div class="well">
+            <%= link_to 'Exibir', post, class: 'btn btn-primary' %>
+            <%= link_to 'Editar', edit_post_path(post) , class: 'btn btn-warning' %>
+            <%= link_to 'Excluir', post, method: :delete, data: { confirm: 'Tem certeza?' } , class: 'btn btn-danger' %>
+          </div>
+
+          </br>
+
+      <% end %>

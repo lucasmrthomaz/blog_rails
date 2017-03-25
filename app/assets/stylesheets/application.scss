@@ -1,0 +1,97 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+@import = 'normalize';
+*/
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/variables";
+
+#mainSlider{
+  display:none;
+}
+
+/*
+.topHeader{
+width:100%;
+height:200px;
+background-color:#09F;
+}
+
+.topMenu{
+width:100%;
+height:50px;
+font-size:18px;
+color:#FFF;
+font-family:Verdana, Geneva, sans-serif;
+background-color:#333;
+}
+
+.leftSidebar{
+width:230px;
+height:1200px;
+margin-top:25px;
+margin-right:30px;
+background-color:#730E15;
+color:#FFF;
+float:left;
+}
+
+
+.footerBase{
+width:100%;
+height:30px;
+font-size:18px;
+font-family:Verdana, Geneva, sans-serif;
+margin-top:50px;
+float:right;
+}
+
+.topMenu_logo{
+width:300px;
+height:30px;
+margin-top:50px;
+margin-left:35px;
+float:left;	
+}
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: white;
+}
+
+
+a {
+  color: #FFF;
+
+  &:visited {
+    color: #FFF;
+  }
+  &:hover {
+    color: cyan;
+    background-color: #000;
+  }
+}
+
+
+body {
+	background-color: #222;
+}
+*/
